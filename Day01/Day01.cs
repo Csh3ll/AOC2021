@@ -10,7 +10,7 @@ namespace Day01
     {
         public override string PartOne()
         {
-            var depths = ReadInputArray<string>().Select(int.Parse).ToArray();
+            var depths = ReadInputArray<int>();
             int counter = 0;
             for (int i = 1; i < depths.Length; i++)
             {
@@ -22,7 +22,7 @@ namespace Day01
         }
         public override string PartTwo()
         {
-            var depths = ReadInputArray<string>().Select(int.Parse).ToArray();
+            var depths = ReadInputArray<int>();
 
             int counter = 0;
             for (var i = 3; i < depths.Length; i++)

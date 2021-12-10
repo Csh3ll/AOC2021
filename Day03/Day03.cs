@@ -14,7 +14,7 @@ namespace Day03
         public override string PartOne()
         {
             {
-                IEnumerable<string> input = ReadInputText<string>().Split(Environment.NewLine);
+                IEnumerable<string> input = ReadInputArray<string>();
                 _bits = input
                     .Select(input => input.Select(CharToInt).ToList())
                     .ToList();

@@ -11,17 +11,17 @@ namespace Day05
     {
         public override string PartOne()
         {
-            string input = ReadInputText<string>();
+            var input = ReadInputArray<string>();
             return CountOverlaps(ParseInput(input, true)).ToString();
         }
         public override string PartTwo()
         {
-            string input = ReadInputText<string>();
+            var input = ReadInputArray<string>();
             return CountOverlaps(ParseInput(input, false)).ToString();
         }
 
-        IEnumerable<IEnumerable<Vector>> ParseInput(string input, bool skipDiagonals)
-            => from line in input.Split("\r\n")
+        IEnumerable<IEnumerable<Vector>> ParseInput(string[] input, bool skipDiagonals)
+            => from line in input
 
             let coordinates = (
                     from data in line.Split(", ->".ToArray(), StringSplitOptions.RemoveEmptyEntries)
